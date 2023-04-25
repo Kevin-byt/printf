@@ -10,7 +10,7 @@
  * @size: Size specifier
  * Return: Number of chars printed.
  */
- 
+
 int handle_write_char(char c, char buffer[],
 	int flags, int width, int precision, int size)
 {
@@ -98,7 +98,7 @@ int write_num(int ind, char buffer[],
 	int i, padd_start = 1;
 
 	if (prec == 0 && ind == BUFF_SIZE - 2 && buffer[ind] == '0' && width == 0)
-		return (0); 
+		return (0);
 	if (prec == 0 && ind == BUFF_SIZE - 2 && buffer[ind] == '0')
 		buffer[ind] = padd = ' ';
 	if (prec > 0 && prec < length)
@@ -251,3 +251,4 @@ int write_pointer(char buffer[], int ind, int length,
 		buffer[--ind] = extra_c;
 	return (write(1, &buffer[ind], BUFF_SIZE - ind - 1));
 }
+
